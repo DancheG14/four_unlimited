@@ -99,6 +99,10 @@ def load_image():
 
 
 st.title('**Классификация оружия на изображении**')
+
+"""### Просмотр загруженного примера"""
+
+
 img = load_image()
 result = st.button('Распознать изображение')
 def print_percent(t):
