@@ -1,3 +1,5 @@
+[![Tests](https://github.com/DancheG14/four_unlimited/actions/workflows/python-app.yml/badge.svg)](https://github.com/DancheG14/four_unlimited/actions/workflows/python-app.yml)
+
 # Приложение с использованием машинного обучения "Распознавание оружия на фото" для развертывания на облачных платформах
 
 Web-приложение для распознавания наличия оружия на фото.Так же сеть может распознавать людей с оружием! [image](https://user-images.githubusercontent.com/92274248/174191304-49957058-57c0-4d5c-9b66-57fa30b4f414.png)
