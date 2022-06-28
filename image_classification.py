@@ -101,5 +101,5 @@ if result:
     st.write('Результаты распознавания: \n ',sub + ",  с вероятностью:  " + print_percent(x))
     
     
-level = st.slider( "Андрей Владимирович, ВАША ОЦЕНКА:" , 1 , 5 )
-st.text( 'Команде: {}' . format (level))
+level = st.slider( "\033[1m" + "Андрей Владимирович, ВАША ОЦЕНКА:" , 1 , 5 )
+st.text('\033[1m' + 'Команде: {}' . format (level))
