@@ -64,7 +64,7 @@ batch_s = 128
 
 """## Загружаем обученную на датасете модель """
 
-os.mkdir('Models/', mode=0o777,*,dir_fd=None)
+os.mkdir('Models/', mode=0o777)
 urllib.request.urlretrieve(url, 'ml_engineering_weapon_and_no.zip')
 with zipfile.ZipFile('ml_engineering_weapon_and_no.zip', 'r') as zip_ref:
     zip_ref.extractall('Models/ml_engineering_weapon_and_no')
