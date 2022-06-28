@@ -17,7 +17,7 @@ def preprocess_image(img):
     x = preprocess_input(x)
     return x
 
-model = load_model("/Models/ml_engineering_weapon_and_no/")
+model = load_model("Models/ml_engineering_weapon_and_no/")
 
 def test_civilian_image():
     # Загрузка и преобразование изображения не оружия
