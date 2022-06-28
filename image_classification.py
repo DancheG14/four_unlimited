@@ -82,7 +82,7 @@ def load_trained_model():
 
 model = load_trained_model()
 
-"""##Загружаем изображение из файла в StreamLit"""
+"""## Загружаем изображение из файла в StreamLit"""
 
 
 def load_image():
@@ -95,7 +95,7 @@ def load_image():
         return None
 
 
-"""##Запускаем предобработку и распознавание"""
+"""## Запускаем предобработку и распознавание"""
 
 
 st.title('**Классификация оружия на изображении**')
@@ -114,10 +114,10 @@ def print_percent(t):
 if result:
     x = preprocess_image(img)
     prediction = model.predict(x)
-    x = prediction[0][0]
-    sub = {
-        x > 0.5 : "Это оружие",
-        x == 0.5: "Не определено",
-        x  < 0.5 : "Это НЕ оружие"
-          }[1]
-    st.write('**Результаты распознавания: \n **',sub + ", с вероятностью: " + print_percent(x))
+    x = prediction#[0][0]
+    #sub = {
+        #x > 0.5 : "Это оружие",
+        #x == 0.5: "Не определено",
+        #x  < 0.5 : "Это НЕ оружие"
+          #}[1]
+    st.write('**Результаты распознавания: \n **', x)#,sub + ", с вероятностью: " + print_percent(x))
