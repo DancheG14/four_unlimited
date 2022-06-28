@@ -11,4 +11,4 @@ Web-приложение для распознавания наличия ору
 
 - [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/abs/1905.11946).
 
-[Ссылка на развернутое приложение](https://image-classification-demo.herokuapp.com/).
+[Ссылка на развернутое приложение](https://dancheg14-four-unlimited-image-classification-zqjc25.streamlitapp.com/).
