@@ -64,13 +64,13 @@ batch_s = 128
 
 """## Загружаем обученную на датасете модель """
 
-#url = 'https://www.dropbox.com/s/ni9567tj2x2r5b6/ml_engineering_weapon_and_no.zip'
+url = 'https://www.dropbox.com/s/ni9567tj2x2r5b6/ml_engineering_weapon_and_no.zip'
 
 
-#os.mkdir('Models/', mode=777)
-#urllib.request.urlretrieve(url, 'ml_engineering_weapon_and_no.zip')
-#with zipfile.ZipFile('ml_engineering_weapon_and_no.zip', 'w') as zip_ref:
-    #zip_ref.extractall('Models/ml_engineering_weapon_and_no')
+os.mkdir('Models/', mode=777)
+urllib.request.urlretrieve(url, 'ml_engineering_weapon_and_no.zip')
+with zipfile.ZipFile('ml_engineering_weapon_and_no.zip', 'w') as zip_ref:
+    zip_ref.extractall('Models/ml_engineering_weapon_and_no')
     
 
 def load_trained_model():
