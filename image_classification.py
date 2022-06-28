@@ -43,7 +43,7 @@ from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.applications.efficientnet import preprocess_input, decode_predictions
 
 
-"""## Конструируем функцию предобработки"""
+## Конструируем функцию предобработки
 
 def preprocess_image(img):
     img = img.resize((224, 224))
