@@ -64,10 +64,9 @@ batch_s = 128
 
 """## Загружаем обученную на датасете модель """
 
-url = 'https://www.dropbox.com/s/ni9567tj2x2r5b6/ml_engineering_weapon_and_no.zip'
-os.mkdir('/Models', mode=0o777,*,dir_fd=None)
-urllib.request.urlretrieve(url, '/ml_engineering_weapon_and_no.zip')
-with zipfile.ZipFile('/ml_engineering_weapon_and_no.zip', 'r') as zip_ref:
+os.mkdir('Models/', mode=0o777,*,dir_fd=None)
+urllib.request.urlretrieve(url, 'ml_engineering_weapon_and_no.zip')
+with zipfile.ZipFile('ml_engineering_weapon_and_no.zip', 'r') as zip_ref:
     zip_ref.extractall('Models/ml_engineering_weapon_and_no')
 
 
