@@ -114,10 +114,10 @@ def print_percent(t):
 if result:
     x = preprocess_image(img)
     prediction = model.predict(x)
-    x = prediction#[0][0]
-    #sub = {
-        #x > 0.5 : "Это оружие",
-        #x == 0.5: "Не определено",
-        #x  < 0.5 : "Это НЕ оружие"
-          #}[1]
-    st.write('**Результаты распознавания: \n **', x)#,sub + ", с вероятностью: " + print_percent(x))
+    x = prediction[0][0]
+    sub = {
+        x > 0.5 : "Это оружие",
+        x == 0.5: "Не определено",
+        x  < 0.5 : "Это НЕ оружие"
+          }[1]
+    st.write('**Результаты распознавания: \n **',sub + ", с вероятностью: " + print_percent(x))
