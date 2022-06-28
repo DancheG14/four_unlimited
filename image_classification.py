@@ -42,7 +42,7 @@ batch_s = 128
 
 
 
-"""## Загружаем обученную на датасете: <https://drive.google.com/file/d/1NQLIVHfuIRIkM4PDhWL7PNQlveojT3wg/view?usp=sharing> [модель](https://www.dropbox.com/s/ni9567tj2x2r5b6/ml_engineering_weapon_and_no.zip/ "Cсылка на dropbox")"""
+"""## Загружаем обученную на [датасете:](https://drive.google.com/file/d/1NQLIVHfuIRIkM4PDhWL7PNQlveojT3wg/view?usp=sharing) [модель](https://www.dropbox.com/s/ni9567tj2x2r5b6/ml_engineering_weapon_and_no.zip/ "Cсылка на dropbox")"""
 
 url = 'https://www.dropbox.com/s/ni9567tj2x2r5b6/ml_engineering_weapon_and_no.zip'
 
