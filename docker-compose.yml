@@ -1,0 +1,6 @@
+version: "3.9"
+services:
+  web:
+    build: streamlit_demo_app
+    ports:  - "8000:8000"
+    
