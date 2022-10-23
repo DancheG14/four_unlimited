@@ -47,8 +47,9 @@ batch_s = 128
 
 url = 'https://www.dropbox.com/s/ni9567tj2x2r5b6/ml_engineering_weapon_and_no.zip'
 
-
+@st.cache(suppress_st_warning=True)
 def load_trained_model():
+    st.write("Cache miss: load_trained_model("Models/ml_engineering_weapon_and_no") ran")
     model = load_model("Models/ml_engineering_weapon_and_no")
     return model
 
@@ -75,10 +76,11 @@ def load_image():
 
 st.title('**Классификация оружия на изображении**')
 
-
+@st.cache
 img = load_image()
 result = st.button('Распознать изображение')
 """### Просмотр загруженного примера"""
+
 def print_percent(t):
     return {
                t >= 0.5: str(round(t, 4) * 100),
