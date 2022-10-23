@@ -49,7 +49,7 @@ url = 'https://www.dropbox.com/s/ni9567tj2x2r5b6/ml_engineering_weapon_and_no.zi
 
 @st.cache(suppress_st_warning=True, allow_output_mutation=True)
 def load_trained_model():
-    st.write("Cache miss: load_trained_model(load_model("Models/ml_engineering_weapon_and_no")) ran")
+    st.write('Cache miss: load_trained_model(load_model("Models/ml_engineering_weapon_and_no")) ran')
     model = load_model("Models/ml_engineering_weapon_and_no")
     return model
 
