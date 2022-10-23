@@ -77,7 +77,7 @@ def load_image():
 st.title('**Классификация оружия на изображении**')
 
 @st.cache(allow_output_mutation=True)
-img = load_image()
+im = load_image()
 result = st.button('Распознать изображение')
 """### Просмотр загруженного примера"""
 
@@ -92,7 +92,7 @@ def print_percent(t):
 
 
 if result:
-    x = preprocess_image(img)
+    x = preprocess_image(im)
     prediction = model.predict(x)
     x = prediction[0][0]
     sub = {
