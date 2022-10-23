@@ -60,7 +60,7 @@ model = load_trained_model()
 
 """## Загружаем изображение из файла в StreamLit"""
 
-
+@st.cache(allow_output_mutation=True)
 def load_image():
     uploaded_file = st.file_uploader(label='Выберите изображение для распознавания')
     if uploaded_file is not None:
@@ -76,8 +76,7 @@ def load_image():
 
 st.title('**Классификация оружия на изображении**')
 
-@st.cache(allow_output_mutation=True)
-im = load_image()
+img = load_image()
 result = st.button('Распознать изображение')
 """### Просмотр загруженного примера"""
 
@@ -92,7 +91,7 @@ def print_percent(t):
 
 
 if result:
-    x = preprocess_image(im)
+    x = preprocess_image(img)
     prediction = model.predict(x)
     x = prediction[0][0]
     sub = {
