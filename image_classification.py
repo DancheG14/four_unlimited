@@ -83,13 +83,13 @@ try:
 
     """## Запускаем предобработку и распознавание"""
 
-
+    @st.cache 
     img = load_image()
     
     
     """### Печатаем результаты распознавания"""
 
-    @st.cache 
+     
     if result:
         x = preprocess_image(img)
         prediction = model.predict(x)
