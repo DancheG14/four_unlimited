@@ -58,7 +58,7 @@ def load_trained_model():
 
 model = load_trained_model()
 
-"""## Загружаем изображение из файла в StreamLit"""
+#Загружаем изображение из файла в StreamLit
 
 def load_image():
     uploaded_file = st.file_uploader(label='Выберите изображение для распознавания')
@@ -66,8 +66,17 @@ def load_image():
         image_data = uploaded_file.getvalue()
         st.image(image_data)
         return Image.open(io.BytesIO(image_data))
+        result = st.button('Распознать изображение')
+        """Просмотр загруженного примера"""
     else:
         return None
+    
+    
+def print_percent(t):
+        return {
+                   t >= 0.5: str(round(t, 4) * 100),
+                   t < 0.5: str(round(1 - t, 4) * 100),
+               }[1] + " %"
 
     
 try:
@@ -75,19 +84,9 @@ try:
     """## Запускаем предобработку и распознавание"""
 
 
-    st.title('**Классификация оружия на изображении**')
-
     img = load_image()
-    result = st.button('Распознать изображение')
-    """### Просмотр загруженного примера"""
-
-    def print_percent(t):
-        return {
-                   t >= 0.5: str(round(t, 4) * 100),
-                   t < 0.5: str(round(1 - t, 4) * 100),
-               }[1] + " %"
-
-
+    
+    
     """### Печатаем результаты распознавания"""
 
 
@@ -101,10 +100,7 @@ try:
             x  < 0.5 : "Это НЕ оружие"
               }[1]
         st.write('Результаты распознавания: \n ',sub + ",  с вероятностью:  " + print_percent(x))
-    
-
-finally:
-
-    """### Андрей Владимирович, ваша оценка:"""
-    level = st.slider( "Пожалуйста выберите:" , 3 , 5 )
-    st.text('Команде: {}' . format (level))
+        """### Андрей Владимирович, ваша оценка:"""
+        @st.cache
+        level = st.slider( "Пожалуйста выберите:" , 3 , 5 )
+        st.text('Команде: {}' . format (level))
