@@ -79,33 +79,30 @@ def print_percent(t):
                }[1] + " %"
 
     
-try:
-
     """## Запускаем предобработку и распознавание"""
 
      
-    img = load_image()
+img = load_image()
     
     
     """### Печатаем результаты распознавания"""
 
      
-    if result:
-        x = preprocess_image(img)
-        prediction = model.predict(x)
-        x = prediction[0][0]
-        sub = {
-            x > 0.5 : "Это оружие",
-            x == 0.5: "Не определено",
-            x  < 0.5 : "Это НЕ оружие"
-              }[1]
-        st.write('Результаты распознавания: \n ',sub + ",  с вероятностью:  " + print_percent(x))
-        """### Андрей Владимирович, ваша оценка:"""
+if result:
+    x = preprocess_image(img)
+    prediction = model.predict(x)
+    x = prediction[0][0]
+    sub = {
+        x > 0.5 : "Это оружие",
+        x == 0.5: "Не определено",
+        x  < 0.5 : "Это НЕ оружие"
+          }[1]
+    @st.cache
+    st.write('Результаты распознавания: \n ',sub + ",  с вероятностью:  " + print_percent(x))
+    """### Андрей Владимирович, ваша оценка:"""
         
-        level = st.slider( "Пожалуйста выберите:" , 3 , 5 )
-        st.text('Команде: {}' . format (level))
+    level = st.slider( "Пожалуйста выберите:" , 3 , 5 )
+    st.text('Команде: {}' . format (level))
         
         
-except:
-    print("ошибка кэша")
-    raise
+
