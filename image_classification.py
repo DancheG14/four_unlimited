@@ -66,8 +66,7 @@ def load_image():
         image_data = uploaded_file.getvalue()
         st.image(image_data)
         return Image.open(io.BytesIO(image_data))
-        result = st.button('Распознать изображение')
-        """Просмотр загруженного примера"""
+        st.write("""Просмотр загруженного примера""")
     else:
         return None
     
@@ -83,6 +82,7 @@ def print_percent(t):
 
      
 img = load_image()
+result = st.button('Распознать изображение')
     
     
 """### Печатаем результаты распознавания"""
