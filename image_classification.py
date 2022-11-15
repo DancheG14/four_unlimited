@@ -104,3 +104,8 @@ try:
         @st.cache
         level = st.slider( "Пожалуйста выберите:" , 3 , 5 )
         st.text('Команде: {}' . format (level))
+        
+        
+except:
+    print("ошибка кэша")
+    raise
