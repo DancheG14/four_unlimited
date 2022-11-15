@@ -89,7 +89,7 @@ try:
     
     """### Печатаем результаты распознавания"""
 
-
+    @st.cache 
     if result:
         x = preprocess_image(img)
         prediction = model.predict(x)
@@ -101,7 +101,7 @@ try:
               }[1]
         st.write('Результаты распознавания: \n ',sub + ",  с вероятностью:  " + print_percent(x))
         """### Андрей Владимирович, ваша оценка:"""
-        @st.cache
+        
         level = st.slider( "Пожалуйста выберите:" , 3 , 5 )
         st.text('Команде: {}' . format (level))
         
