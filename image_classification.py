@@ -102,7 +102,7 @@ if result:
     
 marks = [5,4,3] 
 
-if img is not None:
+if x is not None:
     selected_mark = st.radio("Ваша оценка проекта:", marks)
     st.write("Оценка:", selected_mark)
     if selected_mark == 5:
