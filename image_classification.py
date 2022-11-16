@@ -110,7 +110,6 @@ if pred_x:
     
   
 if result:
-    @st.cache(allow_output_mutation=True)
     selected_mark = st.radio("Ваша оценка проекта:", marks)
     st.write("Оценка:", selected_mark)
     if selected_mark == 5:
