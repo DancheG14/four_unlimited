@@ -87,7 +87,7 @@ result = st.button('Распознать изображение')
     
 st.markdown("""### Печатаем результаты распознавания""")
 
-     
+pred_x = []     
 if result:
     x = preprocess_image(img)
     prediction = model.predict(x)
@@ -97,12 +97,13 @@ if result:
         x == 0.5: "Не определено",
         x  < 0.5 : "Это НЕ оружие"
           }[1]
+    pred_x.append[x]
     st.write('Результаты распознавания: \n ',sub + ",  с вероятностью:  " + print_percent(x))
     st.write("""### Андрей Владимирович, ваша оценка:""")
     
 marks = [5,4,3] 
 
-if x is True:
+if pred_x is not None:
     selected_mark = st.radio("Ваша оценка проекта:", marks)
     st.write("Оценка:", selected_mark)
     if selected_mark == 5:
