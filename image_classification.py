@@ -82,11 +82,13 @@ def print_percent(t):
 img = load_image()
 result = st.button('Распознать изображение')
 if img is not None:
-    st.markdown("""## Запускаем предобработку и распознавание""")
+    st.markdown("""## Просмотрим изображение: """)
+    
     
     
 pred_x = []     
 if result:
+    st.markdown("""## Запускаем предобработку и распознавание""")
     x = preprocess_image(img)
     prediction = model.predict(x)
     x = prediction[0][0]
