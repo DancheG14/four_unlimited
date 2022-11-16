@@ -103,7 +103,7 @@ if result:
     
 marks = [5,4,3] 
 
-if pred_x is not null:
+if pred_x:
     selected_mark = st.radio("Ваша оценка проекта:", marks)
     st.write("Оценка:", selected_mark)
     if selected_mark == 5:
