@@ -78,17 +78,14 @@ def print_percent(t):
                }[1] + " %"
 
     
-"""## Запускаем предобработку и распознавание"""
-
      
 img = load_image()
 result = st.button('Распознать изображение')
     
     
-st.markdown("""### Печатаем результаты распознавания""")
-
 pred_x = []     
 if result:
+    st.markdown("""## Запускаем предобработку и распознавание""")
     x = preprocess_image(img)
     prediction = model.predict(x)
     x = prediction[0][0]
@@ -104,6 +101,7 @@ if result:
 marks = [5,4,3] 
 
 if pred_x:
+    st.markdown("""### Печатаем результаты распознавания""")
     st.write('Результаты распознавания: \n ',sub + ",  с вероятностью:  " + print_percent(x))
     st.markdown("""### Андрей Владимирович, ваша оценка:""")
     
