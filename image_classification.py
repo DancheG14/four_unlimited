@@ -104,17 +104,16 @@ if pred_x:
     st.markdown("""### Печатаем результаты распознавания""")
     st.write('Результаты распознавания: \n ',sub + ",  с вероятностью:  " + print_percent(x))
     
-if pred_x:
+
     st.markdown("""### Андрей Владимирович, ваша оценка:""")
-    for i in range(2):
-        selected_mark = st.radio("Ваша оценка проекта:", marks)
-        st.write("Оценка:", selected_mark)
-        if selected_mark == 5:
-            st.write("Ура")
-        elif selected_mark == 4:
-            st.write("Ну ладно")
-        else:
-            st.write("О ужас, переделываем сегодня же!")
+if selected_mark = st.radio("Ваша оценка проекта:", marks)
+    st.write("Оценка:", selected_mark)
+    if selected_mark == 5:
+        st.write("Ура")
+    elif selected_mark == 4:
+        st.write("Ну ладно")
+    else:
+        st.write("О ужас, переделываем сегодня же!")
          
              
     #level = st.slider( "Пожалуйста выберите:" , 3 , 5 )
