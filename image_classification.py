@@ -105,7 +105,7 @@ if pred_x:
     st.write('Результаты распознавания: \n ',sub + ",  с вероятностью:  " + print_percent(x))
     st.markdown("""### Андрей Владимирович, ваша оценка:""")
     
-    selected_mark = st.radio("Ваша оценка проекта:", marks, value=False)
+    selected_mark = st.radio("Ваша оценка проекта:", marks, index=0)
     st.write("Оценка:", selected_mark)
     if selected_mark == 5:
         st.write("Ура")
