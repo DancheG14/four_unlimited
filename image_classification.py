@@ -104,9 +104,9 @@ if result:
     st.write("""### Андрей Владимирович, ваша оценка:""")
     
     
-    if img is not None:    
-        level = st.slider( "Пожалуйста выберите:" , 3 , 5 )
-        st.text('Команде: {}' . format (level))
+if img is not None:    
+    level = st.slider( "Пожалуйста выберите:" , 3 , 5 )
+    st.text('Команде: {}' . format (level))
     
         
         
