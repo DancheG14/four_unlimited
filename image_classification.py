@@ -98,12 +98,15 @@ if result:
         x  < 0.5 : "Это НЕ оружие"
           }[1]
     pred_x.append(x)
-    st.write('Результаты распознавания: \n ',sub + ",  с вероятностью:  " + print_percent(x))
-    st.write("""### Андрей Владимирович, ваша оценка:""")
+    #st.write('Результаты распознавания: \n ',sub + ",  с вероятностью:  " + print_percent(x))
+    #st.write("""### Андрей Владимирович, ваша оценка:""")
     
 marks = [5,4,3] 
 
 if pred_x:
+    st.write('Результаты распознавания: \n ',sub + ",  с вероятностью:  " + print_percent(x))
+    st.markdown("""### Андрей Владимирович, ваша оценка:""")
+    
     selected_mark = st.radio("Ваша оценка проекта:", marks)
     st.write("Оценка:", selected_mark)
     if selected_mark == 5:
