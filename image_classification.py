@@ -103,10 +103,21 @@ if result:
     st.write('**Результаты распознавания: \n **',sub + ", с вероятностью: " + print_percent(x))
     st.write("""### Андрей Владимирович, ваша оценка:""")
     
-    
-if img is not None:    
-    level = st.slider( "Пожалуйста выберите:" , 3 , 5 )
-    st.text('Команде: {}' . format (level))
+marks = [5,4,3] 
+
+if img is not None:
+    selected_mark = st.radio("Ваша оценка проекта:", marks)
+    st.write("Оценка:", selected_mark)
+    if marks == 5:
+        st.write("Ура" )
+    elif marks == 3:
+        st.write("Ну ладно")
+    else:
+        st.write("О ужас, переделываем сегодня же!")
+         
+             
+    #level = st.slider( "Пожалуйста выберите:" , 3 , 5 )
+    #st.text('Команде: {}' . format (level))
     
         
         
