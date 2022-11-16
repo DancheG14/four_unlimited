@@ -105,9 +105,9 @@ marks = [5,4,3]
 if img is not None:
     selected_mark = st.radio("Ваша оценка проекта:", marks)
     st.write("Оценка:", selected_mark)
-    if marks[] == 5:
+    if marks[0] == 5:
         st.write("Ура" )
-    elif marks[] == 4:
+    elif marks[0] == 4:
         st.write("Ну ладно")
     else:
         st.write("О ужас, переделываем сегодня же!")
