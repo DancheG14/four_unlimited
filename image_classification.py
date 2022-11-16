@@ -100,17 +100,14 @@ if result:
     st.write('Результаты распознавания: \n ',sub + ",  с вероятностью:  " + print_percent(x))
     st.write("""### Андрей Владимирович, ваша оценка:""")
     
-    st.write('**Результаты распознавания: \n **',sub + ", с вероятностью: " + print_percent(x))
-    st.write("""### Андрей Владимирович, ваша оценка:""")
-    
 marks = [5,4,3] 
 
 if img is not None:
     selected_mark = st.radio("Ваша оценка проекта:", marks)
     st.write("Оценка:", selected_mark)
-    if marks == 5:
+    if marks[] == 5:
         st.write("Ура" )
-    elif marks == 3:
+    elif marks[] == 4:
         st.write("Ну ладно")
     else:
         st.write("О ужас, переделываем сегодня же!")
