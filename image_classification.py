@@ -107,6 +107,8 @@ if pred_x:
 
     st.markdown("""### Андрей Владимирович, ваша оценка:""")
     
+    
+@st.cache    
 if result:   
     selected_mark = st.radio("Ваша оценка проекта:", marks)
     st.write("Оценка:", selected_mark)
