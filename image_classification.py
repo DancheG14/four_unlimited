@@ -85,7 +85,7 @@ img = load_image()
 result = st.button('Распознать изображение')
     
     
-"""### Печатаем результаты распознавания"""
+st.markdown("""### Печатаем результаты распознавания""")
 
      
 if result:
@@ -102,7 +102,7 @@ if result:
     
 marks = [5,4,3] 
 
-if x is not None:
+if x:
     selected_mark = st.radio("Ваша оценка проекта:", marks)
     st.write("Оценка:", selected_mark)
     if selected_mark == 5:
