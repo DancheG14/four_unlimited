@@ -100,11 +100,14 @@ if result:
     st.write('Результаты распознавания: \n ',sub + ",  с вероятностью:  " + print_percent(x))
     st.write("""### Андрей Владимирович, ваша оценка:""")
     
-    global level
-    level = st.slider( "Пожалуйста выберите:" , 3 , 5 )
-    st.text('Команде: {}' . format (level))
+    st.write('**Результаты распознавания: \n **',sub + ", с вероятностью: " + print_percent(x))
+    st.write("""### Андрей Владимирович, ваша оценка:""")
     
-level
+    
+    if img is not None:    
+        level = st.slider( "Пожалуйста выберите:" , 3 , 5 )
+        st.text('Команде: {}' . format (level))
+    
         
         
 
