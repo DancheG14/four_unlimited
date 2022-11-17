@@ -112,7 +112,7 @@ if pred_x:
     
   
 if result:
-    selected_mark = st.sidebar.radio("Ваша оценка проекта:", marks)
+    selected_mark = st.sidebar.radio("Ваша оценка проекта:", marks, on_change=print_percent)
     st.write("Оценка:", selected_mark)
     if selected_mark == 5:
         st.write("Ура")
@@ -120,7 +120,9 @@ if result:
         st.write("Ну ладно")
     else:
         st.write("О ужас, переделываем сегодня же!")
-         
+        
+        
+      
              
     #level = st.slider( "Пожалуйста выберите:" , 3 , 5 )
     #st.text('Команде: {}' . format (level))
