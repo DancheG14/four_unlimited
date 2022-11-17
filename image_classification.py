@@ -112,7 +112,7 @@ if pred_x:
     
   
 if result:
-    selected_mark = st.sidebar.radio("Ваша оценка проекта:", marks, on_change=print_percent, args=(0, ))
+    selected_mark = st.sidebar.radio("Ваша оценка проекта:", marks, on_change=result, args=(0, ))
     st.write("Оценка:", selected_mark)
     if selected_mark == 5:
         st.write("Ура")
