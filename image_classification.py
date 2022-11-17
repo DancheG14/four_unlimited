@@ -111,8 +111,8 @@ if pred_x:
     
     
   
-if result:
-    selected_mark = st.sidebar.radio("Ваша оценка проекта:", marks, on_change=load_image, args=(image_data, ))
+if img:
+    selected_mark = st.sidebar.radio("Ваша оценка проекта:", marks)
     st.write("Оценка:", selected_mark)
     if selected_mark == 5:
         st.write("Ура")
