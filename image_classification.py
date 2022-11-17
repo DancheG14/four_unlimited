@@ -63,11 +63,10 @@ model = load_trained_model()
 def load_image():
     uploaded_file = st.file_uploader(label='Выберите изображение для распознавания')
     if uploaded_file is not None:
-        st.markdown("""## Просмотрим изображение: """)
         image_data = uploaded_file.getvalue()
         st.image(image_data)
         return Image.open(io.BytesIO(image_data))
-        st.write("""Просмотр загруженного примера""")
+        st.markdown(""" ### Просмотр загруженного примера""")
     else:
         return None
     
